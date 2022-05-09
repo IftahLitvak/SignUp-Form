@@ -1,0 +1,74 @@
+/* font-family: 'Fredoka One', cursive; */
+
+:root {
+    font-size: 18px;
+    --logo-fam-font: 'Fredoka One', cursive;
+    --input-border-color: #E5E7EB;
+    --main-bg-color: #a0a1a1;
+    --button-bg-color: #596D48;
+    --invalid-input-color: #f50a0a;
+    --valid-input-color: #15f800;
+    --focus-input-color: #643df3;
+    --input-section-bg-color: #ffffff;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+}
+
+.main {
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+.sign-up>p {
+    padding-left: 2rem;
+}
+
+.side-bar {
+    background: url(./images/bg-pic.jpg);
+    height: 100vh;
+    width: 60vw;
+    background-size: cover;
+}
+
+#my-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 37vw;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--input-section-bg-color);
+    padding-left: 2rem;
+    box-shadow: 1rem 1rem 3.5rem rgb(53, 51, 51);
+}
+
+label {
+    width: 10rem;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+input {
+    border: 1px solid var(--input-border-color);
+    border-radius: 15px;
+    width: 12rem;
+    height: 1.5rem;
+}
+
+input:invalid {
+    border-color: var(--invalid-input-color);
+}
+
+input:focus {
+    outline: none;
+    outline-offset: none;
+    border-color: var(--focus-input-color);
+    box-shadow: 0.1rem .2rem .6rem rgb(0, 0, 0);
+}
+
