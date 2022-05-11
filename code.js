@@ -1,4 +1,8 @@
-
+// Hardcoded variables
+const inputRegularColor = '#E5E7EB';
+const inputInvalidColor = '#f50a0a';
+const inputValidColor = '#15f800';
+const inputFocusColor = '#643df3';
 
 // Get handle on all form inputs
 const firstName = document.getElementById('first_name');
@@ -32,6 +36,9 @@ function checkIfValid(e){
     }
     else {
         errorDiv.style.visibility = 'hidden';
+        if (e.target.value == ''){
+            e.target.style.borderColor = inputRegularColor;
+        }
     }
 }
 
@@ -41,15 +48,16 @@ function confirmPasswords(e){
         let userPassConfirm = e.target.value;
         if (userPass != userPassConfirm){
             passwordConfirmError.style.visibility = 'visible';
-            e.target.style.borderColor = '#f50a0a';
+            e.target.style.borderColor = inputInvalidColor;
         }
         else {
             passwordConfirmError.style.visibility = 'hidden';
-            e.target.style.borderColor = '#15f800';        
+            e.target.style.borderColor = inputValidColor;        
         }
     }
     else {
-        e.target.style.borderColor = '#E5E7EB';
+        e.target.style.borderColor = inputRegularColor;
+        passwordConfirmError.style.visibility = 'hidden';
     }
     
 }

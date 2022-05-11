@@ -19,7 +19,8 @@ body {
     display: flex;
     margin: 0px;
     font-family: var(--content-fam-font);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     
 }
 
@@ -84,12 +85,7 @@ a {
     
 }
 
-@media (max-width: 1150px){
-    #my-form {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
-}
+
 
 .inputs {
     display: flex;
@@ -105,6 +101,7 @@ label {
     font-weight: 700;
 }
 
+
 input {
     border: 1px solid;
     border-color: var(--input-border-color);
@@ -112,6 +109,33 @@ input {
     width: 12rem;
     height: 1.5rem;
     padding-left: .6rem;
+}
+
+
+@media (max-width: 1150px){
+    #my-form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    input {
+        border: 1px solid;
+        border-color: var(--input-border-color);
+        border-radius: 15px;
+        width: 14rem;
+        height: 1.5rem;
+        padding-left: .6rem;
+    }
+}
+
+@media (max-width: 950px){
+    input {
+        border: 1px solid;
+        border-color: var(--input-border-color);
+        border-radius: 15px;
+        width: 11rem;
+        height: 1.5rem;
+        padding-left: .6rem;
+    }
 }
 
 input.changed:invalid {
@@ -142,6 +166,16 @@ button {
     margin-left: 2.5rem;
     margin-top: 2rem;
     box-shadow: 0.1rem .2rem .6rem rgb(0, 0, 0);
+}
+
+button:hover {
+    transition: transform 0.09s ease-in-out;
+    transform: scale(1.05);
+}
+
+button:active {
+    transition: transform 0.05s ease-in-out;
+  transform: scale(1);
 }
 
 .have-account {
